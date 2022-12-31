@@ -50,3 +50,5 @@ const resolutions = [
         randomRes: "Enjoy life more"
     }
 ]
+
+export default resolutions;
