@@ -11,6 +11,7 @@ export default function App() {
       key = {resolution.key} 
       title = {resolution.title} 
       content = {resolution.randomRes} 
+      isResolved = {resolution.isResolved}
    />
   ))
 
