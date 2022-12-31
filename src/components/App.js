@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
        <Header />
-       <Resolution />
+       <Resolution title = "title of the resolution" content = "content of the resolution" />
        <Footer />
     </div>
   );
