@@ -1,8 +1,18 @@
+import React from "react";
+
 export default function List() {
+
+    const [resolutionText, setResolutionText] = React.useState("");
+
+    function handleChange(e) {
+        const newValue = e.target.value;
+        setResolutionText(newValue);
+    }
+
     return (
         <div className ="container">
           <div className ="form">
-            <input type ="text" />
+            <input onChange = {handleChange} type ="text" value = {resolutionText} />
             <button>
               <span>Add</span>
             </button>
