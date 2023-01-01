@@ -13,7 +13,8 @@ export default function List() {
     function addResolution() {
         setResolutions(prevRes => {
             return [...prevRes, resolutionText];
-        })
+        });
+        setResolutionText(""); // it clears the input field when the add button is clicked.
     }
 
     return (
