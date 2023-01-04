@@ -18,6 +18,14 @@ export default function List() {
         setResolutionText(""); // it clears the input field when the add button is clicked.
     }
 
+    function deleteResolution(id) {
+      setResolutions(prevRes => {
+        return prevRes.filter((res, index) => {
+          return !index === id;
+        });
+      });
+    }
+
     return (
         <div className ="container">
           <div className ="form">
@@ -28,9 +36,12 @@ export default function List() {
           </div>
           <div>
             <ul>
-              {resolutions.map(resolution => 
+              {resolutions.map((resolution, index) => 
                 <ResolutionList
-                  listItem = {resolution} 
+                  key = {index}
+                  id =  {index}
+                  listItem = {resolution}
+                  onCheckedOff = {deleteResolution} 
                 />
               )}
             </ul>
