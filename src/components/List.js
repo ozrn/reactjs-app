@@ -1,4 +1,5 @@
 import React from "react";
+import ResolutionList from "./ResolutionList";
 
 export default function List() {
 
@@ -27,7 +28,11 @@ export default function List() {
           </div>
           <div>
             <ul>
-              {resolutions.map(resolution => <li>{resolution}</li>)}
+              {resolutions.map(resolution => 
+                <ResolutionList
+                  listItem = {resolution} 
+                />
+              )}
             </ul>
           </div>
         </div>
