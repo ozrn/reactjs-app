@@ -8,14 +8,14 @@ export default function List() {
 
   function handleChange(e) {
     const newValue = e.target.value;
-    setResolutionText(newValue);
+    const regExPattern = new RegExp("[a-zA-Z]");
+    regExPattern.test(newValue[0]) && setResolutionText(newValue);
   }
 
   function addResolution() {
-    resolutionText.length > 0 &&
-      setResolutions((prevRes) => {
-        return [...prevRes, resolutionText];
-      });
+    setResolutions((prevRes) => {
+      return [...prevRes, resolutionText];
+    });
     setResolutionText(""); // it clears the input field when the add button is clicked.
   }
 
